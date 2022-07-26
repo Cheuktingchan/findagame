@@ -1,7 +1,7 @@
-import React from "react";
+import * as React from 'react'
 import "./App.css";
 import CategorySelectHeader from "./category-select-header";
-import Title from "./title-button.jsx";
+import Title from "./title-button";
 
 function App() {
     return (
