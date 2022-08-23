@@ -7,7 +7,7 @@ function App() {
     return (
         <div className="App">
             <Title>Find a game!</Title>
-            <CategorySelectHeader/>
+            <CategorySelectHeader categoryText='Platform!'/>
         </div>
     );
 }

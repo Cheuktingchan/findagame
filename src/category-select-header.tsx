@@ -13,8 +13,11 @@ const S = {
     `,
 };
 
-const CategorySelectHeader = () => {
-    return <S.div>Platform</S.div>;
+interface Props {
+    categoryText: string;
+}
+const CategorySelectHeader = (props: Props) => {
+    return <S.div>{props.categoryText}</S.div>;
 };
 
 export default CategorySelectHeader;
