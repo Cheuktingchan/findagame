@@ -1,14 +1,24 @@
 import * as React from "react";
 import styled from "styled-components";
-import CategorySelectHeader from "./category-select-header";
+import CardContainer from "./card-container";
 import Title from "./title-button";
+
+const S = {
+    div: styled.div`
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    `,
+};
 
 const TitleScreenContainer = () => {
     return(
-    <div>
+    <S.div>
         <Title>Find a game!</Title>
-        <CategorySelectHeader categoryText='Platform!'/>
-    </div>
+        <CardContainer></CardContainer>
+    </S.div>
     );
 };
 

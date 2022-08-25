@@ -6,10 +6,7 @@ const S = {
         background-color: red;
         width: 8rem;
         height: 1.5rem;
-        position: absolute;
-        left: 50%;
         border-radius: 5px;
-        transform: translate(-50%, 0);
     `,
 };
 
