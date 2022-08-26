@@ -1,8 +1,8 @@
+import { JWT_PRIVATE_KEY } from "../config"
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const passwordComplexity = require("joi-password-complexity");
-const { required } = require('joi');
 
 const userSchema = new mongoose.Schema({
     userName: { type: String, required: true },
@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.methods.generateAuthToken = function () {
-    const token = jwt.sign({_id: this._id}, process.env.JWT_PRIVATE_KEY);
+    const token = jwt.sign({_id: this._id}, JWT_PRIVATE_KEY);
     return token;
 }
 

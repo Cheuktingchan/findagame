@@ -1,8 +1,8 @@
 import * as React from 'react'
 import "./App.css";
-import CategorySelectHeader from "./category-select-header";
-import Title from "./title-button";
-import TitleScreenContainer from './title-screen-container';
+import CategorySelectHeader from "./components/category-select-header";
+import Title from "./components/title-button";
+import TitleScreenContainer from './components/title-screen-container';
 
 function App() {
     return (

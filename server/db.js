@@ -1,3 +1,4 @@
+import { DB_DSN } from "./config"
 const mongoose = require("mongoose");
 
 module.exports = () => {
@@ -7,7 +8,7 @@ module.exports = () => {
     };
 
     try {
-        mongoose.connect(process.env.DB, connectionParams); // where DB is env variable of the database URL can be found on cluster site
+        mongoose.connect(DB_DSN, connectionParams); // where DB is env variable of the database URL can be found on cluster site
         console.log("Connected to DB success");
     } catch (error) {
         console.log(error);

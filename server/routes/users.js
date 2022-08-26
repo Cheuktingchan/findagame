@@ -1,3 +1,4 @@
+import { SALT } from "../config"
 const router = require("express").Router();
 const { User, validate } = require("../models/user");
 const bcrypt = require("bcrypt");
@@ -13,7 +14,7 @@ router.post("/", async(req, res) => {
         if (user)
             return res.status(409).send({message: "User with this email already exists"})
         
-        const salt = await bcrypt.genSalt(Number(process.env.SALT));
+        const salt = await bcrypt.genSalt(Number(SALT));
         const hashPassword = await bcrypt.hash(req.body.password, salt);
 
         await new User({ ...req.body, password: hashPassword }).save();
