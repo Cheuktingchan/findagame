@@ -1,4 +1,4 @@
-import { JWT_PRIVATE_KEY } from "../config"
+const JWT_PRIVATE_KEY = require('../config').JWT_PRIVATE_KEY;
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const Joi = require('joi');

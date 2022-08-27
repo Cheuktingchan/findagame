@@ -1,4 +1,4 @@
-import { DB_DSN } from "./config"
+const DB_DSN = require("./config").DB_DSN;
 const mongoose = require("mongoose");
 
 module.exports = () => {
